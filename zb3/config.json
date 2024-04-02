@@ -1,0 +1,74 @@
+{
+  "name": "RACKSYNC ZB #3",
+  "version": "1.36.1-1",
+  "slug": "racksync-multipoint-zigbee-3",
+  "description": "Run Zigbee2MQTT Coordinator separately",
+  "uart": true,
+  "url": "https://github.com/racksync/hass-addons-suite/tree/main/multipoint-zigbee/zb3",
+  "startup": "application",
+  "services": [
+    "mqtt:need"
+  ],
+  "arch": [
+    "aarch64",
+    "amd64",
+    "armhf",
+    "armv7",
+    "i386"
+  ],
+  "boot": "auto",
+  "init": false,
+  "ingress": true,
+  "timeout": 30,
+  "panel_icon": "mdi:numeric-1-circle",
+  "map": [
+    "share:rw",
+    "config:rw"
+  ],
+  "ports": {
+    "8485/tcp": 8488,
+    "8099/tcp": null
+  },
+  "ports_description": {
+    "8485/tcp": "Socat tcp-listen port",
+    "8099/tcp": "Frontend tcp-listen port"
+  },
+  "options": {
+    "data_path": "/config/zb3",
+    "socat": {
+      "enabled": false,
+      "master": "pty,raw,echo=0,link=/tmp/ttyZ2M,mode=777",
+      "slave": "tcp-listen:8485,keepalive,nodelay,reuseaddr,keepidle=1,keepintvl=1,keepcnt=5",
+      "options": "-d -d",
+      "log": false
+    },
+    "mqtt": {},
+    "serial": {}
+  },
+  "schema": {
+    "zigbee_herdsman_debug": "bool?",
+    "data_path": "str",
+    "socat": {
+      "enabled": "bool?",
+      "master": "str?",
+      "slave": "str?",
+      "options": "str?",
+      "log": "bool?"
+    },
+    "mqtt": {
+      "server": "str?",
+      "ca": "str?",
+      "key": "str?",
+      "cert": "str?",
+      "user": "str?",
+      "password": "str?"
+    },
+    "serial": {
+      "port": "str?",
+      "adapter": "match(zstack|deconz|zigate|ezsp|ember)?",
+      "baudrate": "int?",
+      "rtscts": "bool?"
+    }
+  },
+  "image": "zigbee2mqtt/zigbee2mqtt-{arch}"
+}

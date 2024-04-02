@@ -1,10 +1,10 @@
 {
-  "name": "Zigbee2MQTT Edge",
-  "version": "edge",
-  "slug": "zigbee2mqtt_edge",
-  "description": "Development build of the Zigbee2MQTT add-on",
+  "name": "RACKSYNC ZB #4",
+  "version": "1.36.1-1",
+  "slug": "racksync-multipoint-zigbee-4",
+  "description": "Run Zigbee2MQTT Coordinator separately",
   "uart": true,
-  "url": "https://github.com/zigbee2mqtt/hassio-zigbee2mqtt/tree/master/zigbee2mqtt-edge",
+  "url": "https://github.com/racksync/hass-addons-suite/tree/main/multipoint-zigbee/zb4",
   "startup": "application",
   "services": [
     "mqtt:need"
@@ -20,13 +20,13 @@
   "init": false,
   "ingress": true,
   "timeout": 30,
-  "panel_icon": "mdi:zigbee",
+  "panel_icon": "mdi:numeric-4-circle",
   "map": [
     "share:rw",
     "config:rw"
   ],
   "ports": {
-    "8485/tcp": 8485,
+    "8485/tcp": 8489,
     "8099/tcp": null
   },
   "ports_description": {
@@ -34,7 +34,7 @@
     "8099/tcp": "Frontend tcp-listen port"
   },
   "options": {
-    "data_path": "/config/zigbee2mqtt",
+    "data_path": "/config/zb4",
     "socat": {
       "enabled": false,
       "master": "pty,raw,echo=0,link=/tmp/ttyZ2M,mode=777",
@@ -47,7 +47,6 @@
   },
   "schema": {
     "zigbee_herdsman_debug": "bool?",
-    "disable_tuya_default_response": "bool?",
     "data_path": "str",
     "socat": {
       "enabled": "bool?",
@@ -71,5 +70,5 @@
       "rtscts": "bool?"
     }
   },
-  "image": "zigbee2mqtt/zigbee2mqtt-edge-{arch}"
+  "image": "zigbee2mqtt/zigbee2mqtt-{arch}"
 }

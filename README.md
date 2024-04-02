@@ -1,29 +1,13 @@
-<div align="center">
-    <a href="https://github.com/zigbee2mqtt/hassio-zigbee2mqtt">
-        <img width="150" height="150" src="zigbee2mqtt/logo.png">
-    </a>
-    <br>
-    <br>
-    <div style="display: flex;">
-        <a href="https://github.com/zigbee2mqtt/hassio-zigbee2mqtt/actions?query=workflow%3ACI">
-            <img src="https://github.com/zigbee2mqtt/hassio-zigbee2mqtt/workflows/CI/badge.svg">
-        </a>
-        <a href="https://github.com/zigbee2mqtt/hassio-zigbee2mqtt/releases">
-            <img src="https://img.shields.io/github/release/zigbee2mqtt/hassio-zigbee2mqtt.svg">
-        </a>
-        <a href="https://github.com/zigbee2mqtt/hassio-zigbee2mqtt/stargazers">
-            <img src="https://img.shields.io/github/stars/zigbee2mqtt/hassio-zigbee2mqtt.svg">
-        </a>
-        <a href="https://discord.gg/dadfWYE">
-            <img src="https://img.shields.io/discord/556563650429583360.svg">
-        </a>
-        <a href="http://zigbee2mqtt.discourse.group/">
-            <img src="https://img.shields.io/discourse/https/zigbee2mqtt.discourse.group/status.svg">
-        </a>
-    </div>
-    <h1>Official Zigbee2MQTT Home Assistant addon</h1>
-</div>
+# Home Assistant - Run multipoint Zigbee2MQTT Coordinator separately from an Official 
 
+<<<<<<< HEAD
+[![Base Image](https://img.shields.io/badge/Base%20Image-3.18-blue)](https://github.com/home-assistant/docker-base)  [![alpine-armhf](https://img.shields.io/badge/armhf-yes-brightgreen)](https://alpinelinux.org/releases/) 
+[![alpine-armv7](https://img.shields.io/badge/armv7-yes-brightgreen)](https://alpinelinux.org/releases/) 
+[![alpine-aarch64](https://img.shields.io/badge/aarch64-yes-brightgreen)](https://alpinelinux.org/releases/) 
+[![alpine-amd64](https://img.shields.io/badge/amd64-yes-brightgreen)](https://alpinelinux.org/releases/) 
+[![alpine-i386](https://img.shields.io/badge/i386-yes-brightgreen)](https://alpinelinux.org/releases/)
+[![cloudflare-argo-tunnel-release](https://img.shields.io/github/v/release/racksync/hass-addons-multipoint-zigbee)](https://github.com/racksync/hass-addons-multipoint-zigbee/releases) [![last commit](https://img.shields.io/github/last-commit/racksync/hass-addons-multipoint-zigbee)](https://github.com/racksync/hass-addons-multipoint-zigbee/commit/)
+=======
 ## Installation
 1. If you don't have an MQTT broker yet; in Home Assistant go to **[Settings → Add-ons → Add-on store](https://my.home-assistant.io/redirect/supervisor_store/)** and install the **[Mosquitto broker](https://my.home-assistant.io/redirect/supervisor_addon/?addon=core_mosquitto)** addon, then start it.
 1. Go back to the **Add-on store**, click **⋮ → Repositories**, fill in</br>  `https://github.com/zigbee2mqtt/hassio-zigbee2mqtt` and click **Add → Close** or click the **Add repository** button below, click **Add → Close** (You might need to enter the **internal IP address** of your Home Assistant instance first).  
@@ -51,45 +35,27 @@
 1. Wait till Zigbee2MQTT starts and press **OPEN WEB UI** to verify Zigbee2MQTT started correctly.
     - If it shows `502: Bad Gateway` wait a bit more and refresh the page.
     - If this takes too long (e.g. 2 minutes +) check the **Log** tab to see what went wrong.
+>>>>>>> ff786392938cebf8852e7d48bf06122518fcb3e4
 
-For more information see [the documentation](https://github.com/zigbee2mqtt/hassio-zigbee2mqtt/blob/master/zigbee2mqtt/DOCS.md).
+## Disclaimer ###
 
-## Restoring data from a standalone installation
+เหมาะสำหรับท่านที่ต้องการ run zigbee2mqtt โดยสามารถแยกการทำงาน Coordinator มากกว่า 1 จุด
 
-1. Ensure that both environments are running the same version
-1. Backup your standalone environment `data` folder (possibly leaving out the `logs/` folder)
-1. Configure your serial port using the HA addon configuration UI
-1. Restore your `data` folder contents into `/usr/share/hassio/homeassistant/zigbee2mqtt`
-1. Edit the `/usr/share/hassio/homeassistant/zigbee2mqtt/configuration.yaml` file:
-    - Ensure that the serial port section matches the one configured with the UI
-    - Remove any irrelevant sections from the config (e.g. `mqtt`, `advanced/log_syslog`, `frontend`)
-1. Start the add-on
+## How to Install Add-on
 
-## Changelog
-The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/).
-
-All notable changes to this project will be documented in the [CHANGELOG.md](zigbee2mqtt/CHANGELOG.md) file.
-
-Version for releases is based on [Zigbee2MQTT](https://github.com/Koenkk/zigbee2mqtt) format: `X.Y.Z`.
-
-Any changes on the addon that do not require a new version of Zigbee2MQTT will use the format: `X.Y.Z-A` where `X.Y.Z` is fixed on the Zigbee2MQTT release version and `A` is related to the addon.
-
-Edge version will not maintain a CHANGELOG and doesn't have a version.
-
-## Issues
-If you find any issues with the add-on, please check the [issue tracker](https://github.com/zigbee2mqtt/hassio-zigbee2mqtt/issues) for similar issues before creating one. If your issue is regarding specific devices or, more generally, an issue that arises after Zigbee2MQTT has successfully started, it should likely be reported in the [Zigbee2MQTT issue tracker](https://github.com/Koenkk/zigbee2mqtt/issues).
-
-Feel free to create a PR for fixes and enhancements. 
-
-### Testing changes locally
-
-If you're submitting a PR and wish to test it locally:
-- Gain root access to your Home Assistant installation
-- In the Add-on Settings, Ensure "Watchdog" is turned off so the container isn't automatically restarted when it's stopped via the CLI
-
-![image](https://user-images.githubusercontent.com/1923186/198087147-7ab2ba1e-1a68-41b8-9a84-76b25b329786.png)
-- Enter the `zigbee2mqtt` container interactively.
+1. ติดตั้ง addon ด้วยการ add repository : https://github.com/racksync/hass-addons-multipoint-zigbee เข้าไปยัง addon list ตามปกติ
+2. ตั้งค่า addon configuration ดังนี้
+- serial config
+```yaml
+port: tcp://ip-address:6638
+baudrate: 115200
+disable_led: false
+advanced:
+  transmit_power: 20
 ```
+<<<<<<< HEAD
+- network port ที่ระบุใน addon แต่ละตัวจะต้องไม่ซ้ำกัน เช่น ZB #1 รันด้วย default :```8485``` หากต้องการรันอีกตัว (ZB #2) จะต้องแก้ไขพอร์ตไม่ให้ชนกัน เช่น ```8486``` เป็นต้น
+=======
 docker exec -it $(docker ps | grep zigbee2mqtt | cut -d" " -f 1) /bin/sh
 ```
 - Edit the file you'd like to test & save. 
@@ -101,8 +67,33 @@ vi node_modules/zigbee-herdsman-converters/converters/toZigbee.js
 docker restart $(docker ps | grep zigbee2mqtt | cut -d" " -f 1)
 ```
 - Refresh the web UI and perform your testing.
+>>>>>>> ff786392938cebf8852e7d48bf06122518fcb3e4
 
-## Credits
-- [danielwelch](https://github.com/danielwelch)
-- [ciotlosm](https://github.com/ciotlosm)
-- [Koenkk](https://github.com/Koenkk)
+3. แก้ไข topic ในส่วนของ mqtt setting (แก้ไขผ่านหน้า zigbee config หลัก) ที่เมนู **setting -> MQTT** ตรงส่วนของ Base topic จะต้องไม่ซ้ำกัน
+
+4. ทำการรัน Addon ทุกตัวพร้อมกันและเริ่ม Pairing ตามปกติ
+
+
+### Automation Training
+
+- [สินค้าและบริการ](http://racksync.com)
+- [เทรนนิ่งคอร์ส](https://facebook.com/racksync)
+
+### Community
+
+- [Home Automation Thailand](https://www.facebook.com/groups/hathailand)
+- [Home Automation Marketplace](https://www.facebook.com/groups/hatmarketplace)
+- [Home Automation Thailand Discord](https://discord.gg/Wc5CwnWkp4) 
+
+### [RACKSYNC CO., LTD.](https://racksync.com)
+
+บจก.แรคซิงค์ คือผู้เชี่ยวชาญด้าน Automation และ Smart Solutions ทุกขนาด เรามีบริการให้คำปรึกษาตลอดจนวางระบบ ติดตั้งและมอนิเตอร์โดยผู้เชี่ยวชาญ นอกจากนี้เรายังเป็นบริษัทรับพัฒนา Software As A Service แบบครบวงจรอีกด้วย
+\
+\
+RACKSYNC COMPANY LIMITED \
+Suratthani, Thailand 84100 \
+Email : devops@racksync.com \
+Tel : +66 85 880 8885 
+
+[![Home Automation Thailand Discord](https://img.shields.io/discord/986181205504438345?style=for-the-badge)](https://discord.gg/Wc5CwnWkp4) [![Github](https://img.shields.io/github/followers/racksync?style=for-the-badge)](https://github.com/racksync) 
+[![WebsiteStatus](https://img.shields.io/website?down_color=grey&down_message=Offline&style=for-the-badge&up_color=green&up_message=Online&url=https%3A%2F%2Fracksync.com)](https://racksync.com)
