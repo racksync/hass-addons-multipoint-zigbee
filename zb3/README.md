@@ -13,7 +13,7 @@
 
 ## How to Install Add-on
 
-1. ติดตั้ง addon ด้วยการ add repository : https://github.com/racksync/hass-addons-multipoint-zigbee เข้าไปยัง addon list ตามปกติ
+1. ติดตั้ง addon ด้วยการ add repository : https://github.com/racksync/hass-addons-suite เข้าไปยัง addon list ตามปกติ
 2. ตั้งค่า addon configuration ดังนี้
 - serial config
 ```yaml
