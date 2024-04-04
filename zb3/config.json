@@ -20,7 +20,7 @@
   "init": false,
   "ingress": true,
   "timeout": 30,
-  "panel_icon": "mdi:numeric-1-circle",
+  "panel_icon": "mdi:numeric-3-circle",
   "map": [
     "share:rw",
     "config:rw"
