@@ -47,6 +47,7 @@
     },
     "serial": {
       "port": "tcp://192.168.10.12:6638",
+      "adapter": "zstack",
       "baudrate": 115200,
       "disable_led": false,
       "advanced": {
