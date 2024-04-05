@@ -42,9 +42,7 @@
       "options": "-d -d",
       "log": false
     },
-    "mqtt": {
-      "base_topic": "racksync_zb_4"
-    },
+    "mqtt": {},
     "serial": {
       "port": "tcp://192.168.10.14:6638",
       "adapter": "zstack",
@@ -71,9 +69,8 @@
       "key": "str?",
       "cert": "str?",
       "user": "str?",
-      "password": "str?",
-      "base_topic": "str?"
-    },
+      "password": "str?"
+     },
     "serial": {
       "port": "str?",
       "adapter": "match(zstack|deconz|zigate|ezsp|ember)?",
