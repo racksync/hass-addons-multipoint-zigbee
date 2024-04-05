@@ -97,6 +97,8 @@ if bashio::config.is_empty 'mqtt' && bashio::var.has_value "$(bashio::services '
     fi
     export ZIGBEE2MQTT_CONFIG_MQTT_USER="$(bashio::services 'mqtt' 'username')"
     export ZIGBEE2MQTT_CONFIG_MQTT_PASSWORD="$(bashio::services 'mqtt' 'password')"
+    export ZIGBEE2MQTT_CONFIG_MQTT_BASE_TOPIC="$(bashio::config 'mqtt.base_topic')"
+
 fi
 
 bashio::log.info "Starting Zigbee2MQTT..."
