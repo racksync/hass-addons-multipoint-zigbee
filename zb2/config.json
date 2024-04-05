@@ -30,7 +30,7 @@
     "8099/tcp": null
   },
   "ports_description": {
-    "8485/tcp": "Socat tcp-listen port",
+    "8485/tcp": "Socat tcp-listen port (Don't change this port unless you know what you are doing!)",
     "8099/tcp": "Frontend tcp-listen port"
   },
   "options": {
