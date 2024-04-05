@@ -89,16 +89,17 @@ function export_config() {
 export_config 'mqtt'
 export_config 'serial'
 
-if bashio::config.is_empty 'mqtt' && bashio::var.has_value "$(bashio::services 'mqtt')"; then
-    if bashio::var.true "$(bashio::services 'mqtt' 'ssl')"; then
-        export ZIGBEE2MQTT_CONFIG_MQTT_SERVER="mqtts://$(bashio::services 'mqtt' 'host'):$(bashio::services 'mqtt' 'port')"
-    else
-        export ZIGBEE2MQTT_CONFIG_MQTT_SERVER="mqtt://$(bashio::services 'mqtt' 'host'):$(bashio::services 'mqtt' 'port')"
-    fi
-    export ZIGBEE2MQTT_CONFIG_MQTT_USER="$(bashio::services 'mqtt' 'username')"
-    export ZIGBEE2MQTT_CONFIG_MQTT_PASSWORD="$(bashio::services 'mqtt' 'password')"
-
-fi
+# if bashio::config.is_empty 'mqtt' && bashio::var.has_value "$(bashio::services 'mqtt')"; then
+#     if bashio::var.true "$(bashio::services 'mqtt' 'ssl')"; then
+#         export ZIGBEE2MQTT_CONFIG_MQTT_SERVER="mqtts://$(bashio::services 'mqtt' 'host'):$(bashio::services 'mqtt' 'port')"
+#     else
+#         export ZIGBEE2MQTT_CONFIG_MQTT_SERVER="mqtt://$(bashio::services 'mqtt' 'host'):$(bashio::services 'mqtt' 'port')"
+#     fi
+#     export ZIGBEE2MQTT_CONFIG_MQTT_USER="$(bashio::services 'mqtt' 'username')"
+#     export ZIGBEE2MQTT_CONFIG_MQTT_PASSWORD="$(bashio::services 'mqtt' 'password')"
+#     export ZIGBEE2MQTT_CONFIG_MQTT_BASE_TOPIC="$(bashio::services 'mqtt' 'base_topic')"
+      
+# fi
 
 bashio::log.info "Starting Zigbee2MQTT..."
 cd /app
