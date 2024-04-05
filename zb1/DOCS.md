@@ -18,6 +18,7 @@
 - serial config
 ```yaml
 port: tcp://ip-address:6638
+adapter: zstack
 baudrate: 115200
 disable_led: false
 advanced:
