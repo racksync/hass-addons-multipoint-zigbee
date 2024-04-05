@@ -13,8 +13,8 @@
 
 ## How to Install Add-on
 
-1. ติดตั้ง addon ด้วยการ add repository : https://github.com/racksync/hass-addons-suite เข้าไปยัง addon list ตามปกติ
-2. ตั้งค่า addon configuration ดังนี้
+1) ติดตั้ง addon ด้วยการ add repository : https://github.com/racksync/hass-addons-suite เข้าไปยัง addon list ตามปกติ
+2) ตั้งค่า addon configuration ดังนี้
 - serial config
 ```yaml
 port: tcp://ip-address:6638
@@ -26,9 +26,9 @@ advanced:
 ```
 - network port ที่ระบุใน addon แต่ละตัวจะต้องไม่ซ้ำกัน เช่น ZB #1 รันด้วย default :```8485``` หากต้องการรันอีกตัว (ZB #2) จะต้องแก้ไขพอร์ตไม่ให้ชนกัน เช่น ```8486``` เป็นต้น
 
-3. แก้ไข topic ในส่วนของ mqtt setting (แก้ไขผ่านหน้า zigbee config หลัก) ที่เมนู **setting -> MQTT** ตรงส่วนของ Base topic จะต้องไม่ซ้ำกัน
+3) แก้ไข topic ในส่วนของ mqtt setting (แก้ไขผ่านหน้า zigbee config หลัก) ที่เมนู **setting -> MQTT** ตรงส่วนของ Base topic จะต้องไม่ซ้ำกัน
 
-4. ทำการรัน Addon ทุกตัวพร้อมกันและเริ่ม Pairing ตามปกติ
+4) ทำการรัน Addon ทุกตัวพร้อมกันและเริ่ม Pairing ตามปกติ
 
 
 ### Automation Training
