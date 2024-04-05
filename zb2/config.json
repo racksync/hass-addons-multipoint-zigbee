@@ -43,6 +43,7 @@
       "log": false
     },
     "mqtt": {
+      "server": "mqtt://core-mosquitto",
       "base_topic": "racksync_zb_2"
     },
     "serial": {
