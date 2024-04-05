@@ -71,8 +71,8 @@
       "cert": "str?",
       "user": "str?",
       "password": "str?",
-      "base_topic": "str?"
     },
+    "base_topic": "str?",
     "serial": {
       "port": "str?",
       "adapter": "match(zstack|deconz|zigate|ezsp|ember)?",
