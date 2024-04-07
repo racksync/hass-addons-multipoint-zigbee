@@ -9,13 +9,16 @@
 
 ## Disclaimer ###
 
-Suitable for those who want to run zigbee2mqtt and can separate the Coordinator's work at more than 1 point.
+This setup is ideal for those who wish to run zigbee2mqtt and require the ability to distribute the Coordinator's tasks across multiple points. It provides a flexible and efficient solution for managing your home automation system.
 
-## How to Install Add-on
+## Install Add-on
 
-1) Install the addon by adding the repository: https://github.com/racksync/hass-addons-suite to the addon list as usual.
-2) Set the addon configuration as follows:
-- serial config
+Install the addon by adding the repository: https://github.com/racksync/hass-addons-suite to the addon list as usual.
+
+## Configuration 
+
+Set the addon configuration as follows:
+
 ```yaml
 port: tcp://ip-address:6638
 adapter: zstack
@@ -26,9 +29,7 @@ advanced:
 ```
 - Each addon's specified network port must not be the same. For example, ZB #1 runs with default:```8485```. If you want to run another one (ZB #2), you must change the port so they don't collide, such as ```8486```.
 
-3) Edit the topic in the mqtt setting section (edit through the main zigbee config page) in the **setting -> MQTT** menu. The Base topic must not be the same.
-
-4) Run all Addons at the same time and start Pairing as usual.
+- Edit the topic in the mqtt setting section (edit through the main zigbee config page) in the **setting -> MQTT** menu. The Base topic must not be the same.
 
 ### Automation Training
 
