@@ -9,12 +9,12 @@
 
 ## Disclaimer ###
 
-เหมาะสำหรับท่านที่ต้องการ run zigbee2mqtt โดยสามารถแยกการทำงาน Coordinator มากกว่า 1 จุด
+Suitable for those who want to run zigbee2mqtt and can separate the Coordinator's work at more than 1 point.
 
 ## How to Install Add-on
 
-1) ติดตั้ง addon ด้วยการ add repository : https://github.com/racksync/hass-addons-suite เข้าไปยัง addon list ตามปกติ
-2) ตั้งค่า addon configuration ดังนี้
+1) Install the addon by adding the repository: https://github.com/racksync/hass-addons-suite to the addon list as usual.
+2) Set the addon configuration as follows:
 - serial config
 ```yaml
 port: tcp://ip-address:6638
@@ -24,17 +24,17 @@ disable_led: false
 advanced:
   transmit_power: 20
 ```
-- network port ที่ระบุใน addon แต่ละตัวจะต้องไม่ซ้ำกัน เช่น ZB #1 รันด้วย default :```8485``` หากต้องการรันอีกตัว (ZB #2) จะต้องแก้ไขพอร์ตไม่ให้ชนกัน เช่น ```8486``` เป็นต้น
+- Each addon's specified network port must not be the same. For example, ZB #1 runs with default:```8485```. If you want to run another one (ZB #2), you must change the port so they don't collide, such as ```8486```.
 
-3) แก้ไข topic ในส่วนของ mqtt setting (แก้ไขผ่านหน้า zigbee config หลัก) ที่เมนู **setting -> MQTT** ตรงส่วนของ Base topic จะต้องไม่ซ้ำกัน
+3) Edit the topic in the mqtt setting section (edit through the main zigbee config page) in the **setting -> MQTT** menu. The Base topic must not be the same.
 
-4) ทำการรัน Addon ทุกตัวพร้อมกันและเริ่ม Pairing ตามปกติ
+4) Run all Addons at the same time and start Pairing as usual.
 
 
 ### Automation Training
 
-- [สินค้าและบริการ](http://racksync.com)
-- [เทรนนิ่งคอร์ส](https://facebook.com/racksync)
+- [Products and Services](http://racksync.com)
+- [Training Courses](https://facebook.com/racksync)
 
 ### Community
 
@@ -44,7 +44,7 @@ advanced:
 
 ### [RACKSYNC CO., LTD.](https://racksync.com)
 
-บจก.แรคซิงค์ คือผู้เชี่ยวชาญด้าน Automation และ Smart Solutions ทุกขนาด เรามีบริการให้คำปรึกษาตลอดจนวางระบบ ติดตั้งและมอนิเตอร์โดยผู้เชี่ยวชาญ นอกจากนี้เรายังเป็นบริษัทรับพัฒนา Software As A Service แบบครบวงจรอีกด้วย
+RACKSYNC CO., LTD. is an expert in Automation and Smart Solutions of all sizes. We offer consulting services, system layout, installation, and monitoring by experts. In addition, we are a company that develops full-circle Software As A Service.
 \
 \
 RACKSYNC COMPANY LIMITED \
