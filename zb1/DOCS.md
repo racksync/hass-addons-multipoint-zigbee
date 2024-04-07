@@ -30,7 +30,6 @@ advanced:
 
 4) Run all Addons at the same time and start Pairing as usual.
 
-
 ### Automation Training
 
 - [Products and Services](http://racksync.com)
