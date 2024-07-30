@@ -24,6 +24,8 @@ jobs:
                 user_email: 'devops@racksync.com'
                 user_name: 'racksync'
                 commit_message: 'multi-point zigbee has been updated from legacy codebase'
+          - name: Pull latest changes
+            run: git pull origin main
           - name: Push changes
             run: git push -u origin HEAD:main
 
@@ -47,6 +49,8 @@ jobs:
                 user_email: 'devops@racksync.com'
                 user_name: 'racksync'
                 commit_message: 'multi-point zigbee has been updated from legacy codebase'
+          - name: Pull latest changes
+            run: git pull origin main
           - name: Push changes
             run: git push -u origin HEAD:main
           
@@ -70,6 +74,8 @@ jobs:
                 user_email: 'devops@racksync.com'
                 user_name: 'racksync'
                 commit_message: 'multi-point zigbee has been updated from legacy codebase'
+          - name: Pull latest changes
+            run: git pull origin main
           - name: Push changes
             run: git push -u origin HEAD:main
                       
@@ -93,6 +99,8 @@ jobs:
                 user_email: 'devops@racksync.com'
                 user_name: 'racksync'
                 commit_message: 'multi-point zigbee has been updated from legacy codebase'
+          - name: Pull latest changes
+            run: git pull origin main
           - name: Push changes
             run: git push -u origin HEAD:main
 
@@ -116,6 +124,8 @@ jobs:
                 user_email: 'devops@racksync.com'
                 user_name: 'racksync'
                 commit_message: 'multi-point zigbee has been updated from legacy codebase'
+          - name: Pull latest changes
+            run: git pull origin main
           - name: Push changes
             run: git push -u origin HEAD:main
 
@@ -139,6 +149,8 @@ jobs:
                 user_email: 'devops@racksync.com'
                 user_name: 'racksync'
                 commit_message: 'multi-point zigbee has been updated from legacy codebase'
+          - name: Pull latest changes
+            run: git pull origin main
           - name: Push changes
             run: git push -u origin HEAD:main
 
@@ -162,6 +174,8 @@ jobs:
                 user_email: 'devops@racksync.com'
                 user_name: 'racksync'
                 commit_message: 'multi-point zigbee has been updated from legacy codebase'
+          - name: Pull latest changes
+            run: git pull origin main
           - name: Push changes
             run: git push -u origin HEAD:main
 
@@ -185,6 +199,8 @@ jobs:
                 user_email: 'devops@racksync.com'
                 user_name: 'racksync'
                 commit_message: 'multi-point zigbee has been updated from legacy codebase'
+          - name: Pull latest changes
+            run: git pull origin main
           - name: Push changes
             run: git push -u origin HEAD:main
 
@@ -208,6 +224,8 @@ jobs:
                 user_email: 'devops@racksync.com'
                 user_name: 'racksync'
                 commit_message: 'multi-point zigbee has been updated from legacy codebase'
+          - name: Pull latest changes
+            run: git pull origin main
           - name: Push changes
             run: git push -u origin HEAD:main
 
@@ -231,6 +249,8 @@ jobs:
                 user_email: 'devops@racksync.com'
                 user_name: 'racksync'
                 commit_message: 'multi-point zigbee has been updated from legacy codebase'
+          - name: Pull latest changes
+            run: git pull origin main
           - name: Push changes
             run: git push -u origin HEAD:main
 
@@ -254,6 +274,8 @@ jobs:
                 user_email: 'devops@racksync.com'
                 user_name: 'racksync'
                 commit_message: 'multi-point zigbee has been updated from legacy codebase'
+          - name: Pull latest changes
+            run: git pull origin main
           - name: Push changes
             run: git push -u origin HEAD:main
 
@@ -277,6 +299,8 @@ jobs:
                 user_email: 'devops@racksync.com'
                 user_name: 'racksync'
                 commit_message: 'multi-point zigbee has been updated from legacy codebase'
+          - name: Pull latest changes
+            run: git pull origin main
           - name: Push changes
             run: git push -u origin HEAD:main
 
@@ -300,5 +324,7 @@ jobs:
                 user_email: 'devops@racksync.com'
                 user_name: 'racksync'
                 commit_message: 'multi-point zigbee has been updated from legacy codebase'
+          - name: Pull latest changes
+            run: git pull origin main
           - name: Push changes
             run: git push -u origin HEAD:main
