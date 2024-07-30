@@ -9,10 +9,10 @@ jobs:
         steps:
           - name: Checkout
             uses: actions/checkout@v3
-          - name: Fetch latest changes
-            run: git fetch origin main
-          - name: Rebase on latest changes
-            run: git rebase origin/main
+          - name: Fetch all branches
+            run: git fetch --all
+          - name: Rebase on the current branch
+            run: git rebase origin/$(git rev-parse --abbrev-ref HEAD)
           - name: Push ZB01
             uses: dmnemec/copy_file_to_another_repo_action@main
             env:
@@ -32,10 +32,10 @@ jobs:
         steps:
           - name: Checkout
             uses: actions/checkout@v3
-          - name: Fetch latest changes
-            run: git fetch origin main
-          - name: Rebase on latest changes
-            run: git rebase origin/main
+          - name: Fetch all branches
+            run: git fetch --all
+          - name: Rebase on the current branch
+            run: git rebase origin/$(git rev-parse --abbrev-ref HEAD)
           - name: Push ZB02
             uses: dmnemec/copy_file_to_another_repo_action@main
             env:
@@ -55,10 +55,10 @@ jobs:
         steps:
           - name: Checkout
             uses: actions/checkout@v3
-          - name: Fetch latest changes
-            run: git fetch origin main
-          - name: Rebase on latest changes
-            run: git rebase origin/main
+          - name: Fetch all branches
+            run: git fetch --all
+          - name: Rebase on the current branch
+            run: git rebase origin/$(git rev-parse --abbrev-ref HEAD)
           - name: Push ZB03
             uses: dmnemec/copy_file_to_another_repo_action@main
             env:
@@ -78,10 +78,10 @@ jobs:
         steps:
           - name: Checkout
             uses: actions/checkout@v3
-          - name: Fetch latest changes
-            run: git fetch origin main
-          - name: Rebase on latest changes
-            run: git rebase origin/main
+          - name: Fetch all branches
+            run: git fetch --all
+          - name: Rebase on the current branch
+            run: git rebase origin/$(git rev-parse --abbrev-ref HEAD)
           - name: Push ZB04
             uses: dmnemec/copy_file_to_another_repo_action@main
             env:
@@ -101,10 +101,10 @@ jobs:
         steps:
           - name: Checkout
             uses: actions/checkout@v3
-          - name: Fetch latest changes
-            run: git fetch origin main
-          - name: Rebase on latest changes
-            run: git rebase origin/main
+          - name: Fetch all branches
+            run: git fetch --all
+          - name: Rebase on the current branch
+            run: git rebase origin/$(git rev-parse --abbrev-ref HEAD)
           - name: Push ZB05
             uses: dmnemec/copy_file_to_another_repo_action@main
             env:
@@ -124,10 +124,10 @@ jobs:
         steps:
           - name: Checkout
             uses: actions/checkout@v3
-          - name: Fetch latest changes
-            run: git fetch origin main
-          - name: Rebase on latest changes
-            run: git rebase origin/main
+          - name: Fetch all branches
+            run: git fetch --all
+          - name: Rebase on the current branch
+            run: git rebase origin/$(git rev-parse --abbrev-ref HEAD)
           - name: Push ZB06
             uses: dmnemec/copy_file_to_another_repo_action@main
             env:
@@ -147,10 +147,10 @@ jobs:
         steps:
           - name: Checkout
             uses: actions/checkout@v3
-          - name: Fetch latest changes
-            run: git fetch origin main
-          - name: Rebase on latest changes
-            run: git rebase origin/main
+          - name: Fetch all branches
+            run: git fetch --all
+          - name: Rebase on the current branch
+            run: git rebase origin/$(git rev-parse --abbrev-ref HEAD)
           - name: Push ZB07
             uses: dmnemec/copy_file_to_another_repo_action@main
             env:
@@ -170,10 +170,10 @@ jobs:
         steps:
           - name: Checkout
             uses: actions/checkout@v3
-          - name: Fetch latest changes
-            run: git fetch origin main
-          - name: Rebase on latest changes
-            run: git rebase origin/main
+          - name: Fetch all branches
+            run: git fetch --all
+          - name: Rebase on the current branch
+            run: git rebase origin/$(git rev-parse --abbrev-ref HEAD)
           - name: Push ZB08
             uses: dmnemec/copy_file_to_another_repo_action@main
             env:
@@ -193,10 +193,10 @@ jobs:
         steps:
           - name: Checkout
             uses: actions/checkout@v3
-          - name: Fetch latest changes
-            run: git fetch origin main
-          - name: Rebase on latest changes
-            run: git rebase origin/main
+          - name: Fetch all branches
+            run: git fetch --all
+          - name: Rebase on the current branch
+            run: git rebase origin/$(git rev-parse --abbrev-ref HEAD)
           - name: Push ZB09
             uses: dmnemec/copy_file_to_another_repo_action@main
             env:
@@ -216,10 +216,10 @@ jobs:
         steps:
           - name: Checkout
             uses: actions/checkout@v3
-          - name: Fetch latest changes
-            run: git fetch origin main
-          - name: Rebase on latest changes
-            run: git rebase origin/main
+          - name: Fetch all branches
+            run: git fetch --all
+          - name: Rebase on the current branch
+            run: git rebase origin/$(git rev-parse --abbrev-ref HEAD)
           - name: Push ZB10
             uses: dmnemec/copy_file_to_another_repo_action@main
             env:
@@ -239,10 +239,10 @@ jobs:
         steps:
           - name: Checkout
             uses: actions/checkout@v3
-          - name: Fetch latest changes
-            run: git fetch origin main
-          - name: Rebase on latest changes
-            run: git rebase origin/main
+          - name: Fetch all branches
+            run: git fetch --all
+          - name: Rebase on the current branch
+            run: git rebase origin/$(git rev-parse --abbrev-ref HEAD)
           - name: Push zigbee2mqtt-edge
             uses: dmnemec/copy_file_to_another_repo_action@main
             env:
@@ -262,10 +262,10 @@ jobs:
         steps:
           - name: Checkout
             uses: actions/checkout@v3
-          - name: Fetch latest changes
-            run: git fetch origin main
-          - name: Rebase on latest changes
-            run: git rebase origin/main
+          - name: Fetch all branches
+            run: git fetch --all
+          - name: Rebase on the current branch
+            run: git rebase origin/$(git rev-parse --abbrev-ref HEAD)
           - name: Push zigbee2mqtt-proxy
             uses: dmnemec/copy_file_to_another_repo_action@main
             env:
@@ -285,10 +285,10 @@ jobs:
         steps:
           - name: Checkout
             uses: actions/checkout@v3
-          - name: Fetch latest changes
-            run: git fetch origin main
-          - name: Rebase on latest changes
-            run: git rebase origin/main
+          - name: Fetch all branches
+            run: git fetch --all
+          - name: Rebase on the current branch
+            run: git rebase origin/$(git rev-parse --abbrev-ref HEAD)
           - name: Push Common
             uses: dmnemec/copy_file_to_another_repo_action@main
             env:
