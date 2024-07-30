@@ -24,8 +24,13 @@ jobs:
                 user_email: 'devops@racksync.com'
                 user_name: 'racksync'
                 commit_message: 'multi-point zigbee has been updated from legacy codebase'
-          - name: Push changes
-            run: git push -u origin HEAD:main
+          - name: Pull latest changes
+            run: git pull origin main
+          - name: Push changes with retry
+            run: |
+              for i in {1..5}; do
+                git push -u origin HEAD:main && break || sleep 15
+              done
 
     push-zb02:
         runs-on: ubuntu-latest
@@ -47,8 +52,13 @@ jobs:
                 user_email: 'devops@racksync.com'
                 user_name: 'racksync'
                 commit_message: 'multi-point zigbee has been updated from legacy codebase'
-          - name: Push changes
-            run: git push -u origin HEAD:main
+          - name: Pull latest changes
+            run: git pull origin main
+          - name: Push changes with retry
+            run: |
+              for i in {1..5}; do
+                git push -u origin HEAD:main && break || sleep 15
+              done
           
     push-zb03:
         runs-on: ubuntu-latest
@@ -70,8 +80,13 @@ jobs:
                 user_email: 'devops@racksync.com'
                 user_name: 'racksync'
                 commit_message: 'multi-point zigbee has been updated from legacy codebase'
-          - name: Push changes
-            run: git push -u origin HEAD:main
+          - name: Pull latest changes
+            run: git pull origin main
+          - name: Push changes with retry
+            run: |
+              for i in {1..5}; do
+                git push -u origin HEAD:main && break || sleep 15
+              done
                       
     push-zb04:
         runs-on: ubuntu-latest
@@ -93,8 +108,13 @@ jobs:
                 user_email: 'devops@racksync.com'
                 user_name: 'racksync'
                 commit_message: 'multi-point zigbee has been updated from legacy codebase'
-          - name: Push changes
-            run: git push -u origin HEAD:main
+          - name: Pull latest changes
+            run: git pull origin main
+          - name: Push changes with retry
+            run: |
+              for i in {1..5}; do
+                git push -u origin HEAD:main && break || sleep 15
+              done
 
     push-zb05:
         runs-on: ubuntu-latest
@@ -116,8 +136,13 @@ jobs:
                 user_email: 'devops@racksync.com'
                 user_name: 'racksync'
                 commit_message: 'multi-point zigbee has been updated from legacy codebase'
-          - name: Push changes
-            run: git push -u origin HEAD:main
+          - name: Pull latest changes
+            run: git pull origin main
+          - name: Push changes with retry
+            run: |
+              for i in {1..5}; do
+                git push -u origin HEAD:main && break || sleep 15
+              done
 
     push-zb06:
         runs-on: ubuntu-latest
@@ -139,8 +164,13 @@ jobs:
                 user_email: 'devops@racksync.com'
                 user_name: 'racksync'
                 commit_message: 'multi-point zigbee has been updated from legacy codebase'
-          - name: Push changes
-            run: git push -u origin HEAD:main
+          - name: Pull latest changes
+            run: git pull origin main
+          - name: Push changes with retry
+            run: |
+              for i in {1..5}; do
+                git push -u origin HEAD:main && break || sleep 15
+              done
 
     push-zb07:
         runs-on: ubuntu-latest
@@ -162,8 +192,13 @@ jobs:
                 user_email: 'devops@racksync.com'
                 user_name: 'racksync'
                 commit_message: 'multi-point zigbee has been updated from legacy codebase'
-          - name: Push changes
-            run: git push -u origin HEAD:main
+          - name: Pull latest changes
+            run: git pull origin main
+          - name: Push changes with retry
+            run: |
+              for i in {1..5}; do
+                git push -u origin HEAD:main && break || sleep 15
+              done
 
     push-zb08:
         runs-on: ubuntu-latest
@@ -185,8 +220,13 @@ jobs:
                 user_email: 'devops@racksync.com'
                 user_name: 'racksync'
                 commit_message: 'multi-point zigbee has been updated from legacy codebase'
-          - name: Push changes
-            run: git push -u origin HEAD:main
+          - name: Pull latest changes
+            run: git pull origin main
+          - name: Push changes with retry
+            run: |
+              for i in {1..5}; do
+                git push -u origin HEAD:main && break || sleep 15
+              done
 
     push-zb09:
         runs-on: ubuntu-latest
@@ -208,8 +248,13 @@ jobs:
                 user_email: 'devops@racksync.com'
                 user_name: 'racksync'
                 commit_message: 'multi-point zigbee has been updated from legacy codebase'
-          - name: Push changes
-            run: git push -u origin HEAD:main
+          - name: Pull latest changes
+            run: git pull origin main
+          - name: Push changes with retry
+            run: |
+              for i in {1..5}; do
+                git push -u origin HEAD:main && break || sleep 15
+              done
 
     push-zb10:
         runs-on: ubuntu-latest
@@ -231,8 +276,13 @@ jobs:
                 user_email: 'devops@racksync.com'
                 user_name: 'racksync'
                 commit_message: 'multi-point zigbee has been updated from legacy codebase'
-          - name: Push changes
-            run: git push -u origin HEAD:main
+          - name: Pull latest changes
+            run: git pull origin main
+          - name: Push changes with retry
+            run: |
+              for i in {1..5}; do
+                git push -u origin HEAD:main && break || sleep 15
+              done
 
     push-zigbee2mqtt-edge:
         runs-on: ubuntu-latest
@@ -254,8 +304,13 @@ jobs:
                 user_email: 'devops@racksync.com'
                 user_name: 'racksync'
                 commit_message: 'multi-point zigbee has been updated from legacy codebase'
-          - name: Push changes
-            run: git push -u origin HEAD:main
+          - name: Pull latest changes
+            run: git pull origin main
+          - name: Push changes with retry
+            run: |
+              for i in {1..5}; do
+                git push -u origin HEAD:main && break || sleep 15
+              done
 
     push-zigbee2mqtt-proxy:
         runs-on: ubuntu-latest
@@ -277,8 +332,13 @@ jobs:
                 user_email: 'devops@racksync.com'
                 user_name: 'racksync'
                 commit_message: 'multi-point zigbee has been updated from legacy codebase'
-          - name: Push changes
-            run: git push -u origin HEAD:main
+          - name: Pull latest changes
+            run: git pull origin main
+          - name: Push changes with retry
+            run: |
+              for i in {1..5}; do
+                git push -u origin HEAD:main && break || sleep 15
+              done
 
     push-common:
         runs-on: ubuntu-latest
@@ -300,5 +360,10 @@ jobs:
                 user_email: 'devops@racksync.com'
                 user_name: 'racksync'
                 commit_message: 'multi-point zigbee has been updated from legacy codebase'
-          - name: Push changes
-            run: git push -u origin HEAD:main
+          - name: Pull latest changes
+            run: git pull origin main
+          - name: Push changes with retry
+            run: |
+              for i in {1..5}; do
+                git push -u origin HEAD:main && break || sleep 15
+              done
