@@ -4,173 +4,222 @@ on:
     branches: master
 
 jobs:
-    push-zb1:
+    push-zb01:
         runs-on: ubuntu-latest
         steps:
           - name: Checkout
             uses: actions/checkout@v3
-          - name: Push ZB1
+          - name: Fetch latest changes
+            run: git fetch origin main
+          - name: Rebase on latest changes
+            run: git rebase origin/main
+          - name: Push ZB01
             uses: dmnemec/copy_file_to_another_repo_action@main
             env:
                 API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
             with:
-                source_file: "zb1/"
+                source_file: "zb01/"
                 destination_repo: 'racksync/hass-addons-suite'
                 destination_folder: 'multipoint-zigbee/'
                 user_email: 'devops@racksync.com'
                 user_name: 'racksync'
                 commit_message: 'multi-point zigbee has been updated from legacy codebase'
+          - name: Push changes
+            run: git push -u origin HEAD:main
 
-    push-zb2:
+    push-zb02:
         runs-on: ubuntu-latest
         steps:
           - name: Checkout
             uses: actions/checkout@v3
-
-          - name: Push ZB2
+          - name: Fetch latest changes
+            run: git fetch origin main
+          - name: Rebase on latest changes
+            run: git rebase origin/main
+          - name: Push ZB02
             uses: dmnemec/copy_file_to_another_repo_action@main
             env:
                 API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
             with:
-                source_file: "zb2/"
+                source_file: "zb02/"
                 destination_repo: 'racksync/hass-addons-suite'
                 destination_folder: 'multipoint-zigbee/'
                 user_email: 'devops@racksync.com'
                 user_name: 'racksync'
                 commit_message: 'multi-point zigbee has been updated from legacy codebase'
+          - name: Push changes
+            run: git push -u origin HEAD:main
           
-    push-zb3:
+    push-zb03:
         runs-on: ubuntu-latest
         steps:
           - name: Checkout
             uses: actions/checkout@v3
-
-          - name: Push ZB3
+          - name: Fetch latest changes
+            run: git fetch origin main
+          - name: Rebase on latest changes
+            run: git rebase origin/main
+          - name: Push ZB03
             uses: dmnemec/copy_file_to_another_repo_action@main
             env:
                 API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
             with:
-                source_file: "zb3/"
+                source_file: "zb03/"
                 destination_repo: 'racksync/hass-addons-suite'
                 destination_folder: 'multipoint-zigbee/'
                 user_email: 'devops@racksync.com'
                 user_name: 'racksync'
                 commit_message: 'multi-point zigbee has been updated from legacy codebase'
+          - name: Push changes
+            run: git push -u origin HEAD:main
                       
-    push-zb4:
+    push-zb04:
         runs-on: ubuntu-latest
         steps:
           - name: Checkout
             uses: actions/checkout@v3
-
-          - name: Push ZB4
+          - name: Fetch latest changes
+            run: git fetch origin main
+          - name: Rebase on latest changes
+            run: git rebase origin/main
+          - name: Push ZB04
             uses: dmnemec/copy_file_to_another_repo_action@main
             env:
                 API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
             with:
-                source_file: "zb4/"
+                source_file: "zb04/"
                 destination_repo: 'racksync/hass-addons-suite'
                 destination_folder: 'multipoint-zigbee/'
                 user_email: 'devops@racksync.com'
                 user_name: 'racksync'
                 commit_message: 'multi-point zigbee has been updated from legacy codebase'
+          - name: Push changes
+            run: git push -u origin HEAD:main
 
-    push-zb5:
+    push-zb05:
         runs-on: ubuntu-latest
         steps:
           - name: Checkout
             uses: actions/checkout@v3
-
-          - name: Push ZB5
+          - name: Fetch latest changes
+            run: git fetch origin main
+          - name: Rebase on latest changes
+            run: git rebase origin/main
+          - name: Push ZB05
             uses: dmnemec/copy_file_to_another_repo_action@main
             env:
                 API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
             with:
-                source_file: "zb5/"
+                source_file: "zb05/"
                 destination_repo: 'racksync/hass-addons-suite'
                 destination_folder: 'multipoint-zigbee/'
                 user_email: 'devops@racksync.com'
                 user_name: 'racksync'
                 commit_message: 'multi-point zigbee has been updated from legacy codebase'
+          - name: Push changes
+            run: git push -u origin HEAD:main
 
-    push-zb6:
+    push-zb06:
         runs-on: ubuntu-latest
         steps:
           - name: Checkout
             uses: actions/checkout@v3
-
-          - name: Push ZB6
+          - name: Fetch latest changes
+            run: git fetch origin main
+          - name: Rebase on latest changes
+            run: git rebase origin/main
+          - name: Push ZB06
             uses: dmnemec/copy_file_to_another_repo_action@main
             env:
                 API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
             with:
-                source_file: "zb6/"
+                source_file: "zb06/"
                 destination_repo: 'racksync/hass-addons-suite'
                 destination_folder: 'multipoint-zigbee/'
                 user_email: 'devops@racksync.com'
                 user_name: 'racksync'
                 commit_message: 'multi-point zigbee has been updated from legacy codebase'
+          - name: Push changes
+            run: git push -u origin HEAD:main
 
-    push-zb7:
+    push-zb07:
         runs-on: ubuntu-latest
         steps:
           - name: Checkout
             uses: actions/checkout@v3
-
-          - name: Push ZB7
+          - name: Fetch latest changes
+            run: git fetch origin main
+          - name: Rebase on latest changes
+            run: git rebase origin/main
+          - name: Push ZB07
             uses: dmnemec/copy_file_to_another_repo_action@main
             env:
                 API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
             with:
-                source_file: "zb7/"
+                source_file: "zb07/"
                 destination_repo: 'racksync/hass-addons-suite'
                 destination_folder: 'multipoint-zigbee/'
                 user_email: 'devops@racksync.com'
                 user_name: 'racksync'
                 commit_message: 'multi-point zigbee has been updated from legacy codebase'
+          - name: Push changes
+            run: git push -u origin HEAD:main
 
-    push-zb8:
+    push-zb08:
         runs-on: ubuntu-latest
         steps:
           - name: Checkout
             uses: actions/checkout@v3
-
-          - name: Push ZB8
+          - name: Fetch latest changes
+            run: git fetch origin main
+          - name: Rebase on latest changes
+            run: git rebase origin/main
+          - name: Push ZB08
             uses: dmnemec/copy_file_to_another_repo_action@main
             env:
                 API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
             with:
-                source_file: "zb8/"
+                source_file: "zb08/"
                 destination_repo: 'racksync/hass-addons-suite'
                 destination_folder: 'multipoint-zigbee/'
                 user_email: 'devops@racksync.com'
                 user_name: 'racksync'
                 commit_message: 'multi-point zigbee has been updated from legacy codebase'
+          - name: Push changes
+            run: git push -u origin HEAD:main
 
-    push-zb9:
+    push-zb09:
         runs-on: ubuntu-latest
         steps:
           - name: Checkout
             uses: actions/checkout@v3
-
-          - name: Push ZB9
+          - name: Fetch latest changes
+            run: git fetch origin main
+          - name: Rebase on latest changes
+            run: git rebase origin/main
+          - name: Push ZB09
             uses: dmnemec/copy_file_to_another_repo_action@main
             env:
                 API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
             with:
-                source_file: "zb9/"
+                source_file: "zb09/"
                 destination_repo: 'racksync/hass-addons-suite'
                 destination_folder: 'multipoint-zigbee/'
                 user_email: 'devops@racksync.com'
                 user_name: 'racksync'
                 commit_message: 'multi-point zigbee has been updated from legacy codebase'
+          - name: Push changes
+            run: git push -u origin HEAD:main
 
     push-zb10:
         runs-on: ubuntu-latest
         steps:
           - name: Checkout
             uses: actions/checkout@v3
-
+          - name: Fetch latest changes
+            run: git fetch origin main
+          - name: Rebase on latest changes
+            run: git rebase origin/main
           - name: Push ZB10
             uses: dmnemec/copy_file_to_another_repo_action@main
             env:
@@ -182,50 +231,64 @@ jobs:
                 user_email: 'devops@racksync.com'
                 user_name: 'racksync'
                 commit_message: 'multi-point zigbee has been updated from legacy codebase'
+          - name: Push changes
+            run: git push -u origin HEAD:main
 
     push-zigbee2mqtt-edge:
-      runs-on: ubuntu-latest
-      steps:
-        - name: Checkout
-          uses: actions/checkout@v3
-
-        - name: Push zigbee2mqtt-edge
-          uses: dmnemec/copy_file_to_another_repo_action@main
-          env:
-              API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
-          with:
-              source_file: "zigbee2mqtt-edge/"
-              destination_repo: 'racksync/hass-addons-suite'
-              destination_folder: 'multipoint-zigbee/'
-              user_email: 'devops@racksync.com'
-              user_name: 'racksync'
-              commit_message: 'multi-point zigbee has been updated from legacy codebase'
+        runs-on: ubuntu-latest
+        steps:
+          - name: Checkout
+            uses: actions/checkout@v3
+          - name: Fetch latest changes
+            run: git fetch origin main
+          - name: Rebase on latest changes
+            run: git rebase origin/main
+          - name: Push zigbee2mqtt-edge
+            uses: dmnemec/copy_file_to_another_repo_action@main
+            env:
+                API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+            with:
+                source_file: "zigbee2mqtt-edge/"
+                destination_repo: 'racksync/hass-addons-suite'
+                destination_folder: 'multipoint-zigbee/'
+                user_email: 'devops@racksync.com'
+                user_name: 'racksync'
+                commit_message: 'multi-point zigbee has been updated from legacy codebase'
+          - name: Push changes
+            run: git push -u origin HEAD:main
 
     push-zigbee2mqtt-proxy:
-      runs-on: ubuntu-latest
-      steps:
-        - name: Checkout
-          uses: actions/checkout@v3
-
-        - name: Push zigbee2mqtt-proxy
-          uses: dmnemec/copy_file_to_another_repo_action@main
-          env:
-              API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
-          with:
-              source_file: "zigbee2mqtt-proxy/"
-              destination_repo: 'racksync/hass-addons-suite'
-              destination_folder: 'multipoint-zigbee/'
-              user_email: 'devops@racksync.com'
-              user_name: 'racksync'
-              commit_message: 'multi-point zigbee has been updated from legacy codebase'
-                    
+        runs-on: ubuntu-latest
+        steps:
+          - name: Checkout
+            uses: actions/checkout@v3
+          - name: Fetch latest changes
+            run: git fetch origin main
+          - name: Rebase on latest changes
+            run: git rebase origin/main
+          - name: Push zigbee2mqtt-proxy
+            uses: dmnemec/copy_file_to_another_repo_action@main
+            env:
+                API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+            with:
+                source_file: "zigbee2mqtt-proxy/"
+                destination_repo: 'racksync/hass-addons-suite'
+                destination_folder: 'multipoint-zigbee/'
+                user_email: 'devops@racksync.com'
+                user_name: 'racksync'
+                commit_message: 'multi-point zigbee has been updated from legacy codebase'
+          - name: Push changes
+            run: git push -u origin HEAD:main
 
     push-common:
         runs-on: ubuntu-latest
         steps:
           - name: Checkout
             uses: actions/checkout@v3
-
+          - name: Fetch latest changes
+            run: git fetch origin main
+          - name: Rebase on latest changes
+            run: git rebase origin/main
           - name: Push Common
             uses: dmnemec/copy_file_to_another_repo_action@main
             env:
@@ -237,3 +300,5 @@ jobs:
                 user_email: 'devops@racksync.com'
                 user_name: 'racksync'
                 commit_message: 'multi-point zigbee has been updated from legacy codebase'
+          - name: Push changes
+            run: git push -u origin HEAD:main

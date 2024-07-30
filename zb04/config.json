@@ -1,10 +1,10 @@
 {
-  "name": "RS ZB #4",
+  "name": "RS ZB #04",
   "version": "1.39.0-1",
-  "slug": "racksync-multipoint-zigbee-4",
+  "slug": "racksync-multipoint-zigbee-04",
   "description": "Run Zigbee2MQTT Coordinator separately",
   "uart": true,
-  "url": "https://github.com/racksync/hass-addons-suite/tree/main/multipoint-zigbee/zb4",
+  "url": "https://github.com/racksync/hass-addons-suite/tree/main/multipoint-zigbee/zb04",
   "startup": "application",
   "services": [
     "mqtt:need"
@@ -34,7 +34,7 @@
     "8099/tcp": "Frontend tcp-listen port"
   },
   "options": {
-    "data_path": "/config/racksync_zb_4",
+    "data_path": "/config/racksync_zb_04",
     "socat": {
       "enabled": false,
       "master": "pty,raw,echo=0,link=/tmp/ttyZ2M,mode=777",

@@ -1,10 +1,10 @@
 {
-  "name": "RS ZB #6",
+  "name": "RS ZB #07",
   "version": "1.39.0-1",
-  "slug": "racksync-multipoint-zigbee-6",
+  "slug": "racksync-multipoint-zigbee-07",
   "description": "Run Zigbee2MQTT Coordinator separately",
   "uart": true,
-  "url": "https://github.com/racksync/hass-addons-suite/tree/main/multipoint-zigbee/zb6",
+  "url": "https://github.com/racksync/hass-addons-suite/tree/main/multipoint-zigbee/zb07",
   "startup": "application",
   "services": [
     "mqtt:need"
@@ -20,13 +20,13 @@
   "init": false,
   "ingress": true,
   "timeout": 30,
-  "panel_icon": "mdi:numeric-6-circle",
+  "panel_icon": "mdi:numeric-7-circle",
   "map": [
     "share:rw",
     "config:rw"
   ],
   "ports": {
-    "8485/tcp": 8491,
+    "8485/tcp": 8492,
     "8099/tcp": null
   },
   "ports_description": {
@@ -34,7 +34,7 @@
     "8099/tcp": "Frontend tcp-listen port"
   },
   "options": {
-    "data_path": "/config/racksync_zb_6",
+    "data_path": "/config/racksync_zb_07",
     "socat": {
       "enabled": false,
       "master": "pty,raw,echo=0,link=/tmp/ttyZ2M,mode=777",
@@ -44,7 +44,7 @@
     },
     "mqtt": {},
     "serial": {
-      "port": "tcp://192.168.10.16:6638",
+      "port": "tcp://192.168.10.17:6638",
       "adapter": "zstack",
       "baudrate": 115200,
       "disable_led": false,
