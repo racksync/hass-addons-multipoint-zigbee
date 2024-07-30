@@ -1,6 +1,6 @@
 {
-  "name": "RACKSYNC ZB #4",
-  "version": "1.36.1-1",
+  "name": "RS ZB #4",
+  "version": "1.39.0-1",
   "slug": "racksync-multipoint-zigbee-4",
   "description": "Run Zigbee2MQTT Coordinator separately",
   "uart": true,
@@ -76,7 +76,8 @@
       "adapter": "match(zstack|deconz|zigate|ezsp|ember)?",
       "baudrate": "int?",
       "rtscts": "bool?"
-    }
+    },
+    "watchdog": "str?"
   },
   "image": "zigbee2mqtt/zigbee2mqtt-{arch}"
 }

@@ -1,6 +1,6 @@
 #!/usr/bin/env bashio
 
-bashio::log.info "Bring to you with love by RACKSYNC 🇹🇭"
+bashio::log.info "Preparing to start..."
 
 # Check if HA supervisor started
 # Workaround for:
@@ -59,11 +59,11 @@ advanced:
 EOF
 fi
 
-if bashio::config.true 'zigbee_herdsman_debug'; then
-    bashio::log.info "Zigbee Herdsman debug logging enabled"
-    export DEBUG="zigbee-herdsman:*"
-    export NODE_OPTIONS=--trace-warnings
+if bashio::config.has_value 'watchdog'; then
+    export Z2M_WATCHDOG="$(bashio::config 'watchdog')"
+    bashio::log.info "Enabled Zigbee2MQTT watchdog with value '$Z2M_WATCHDOG'"
 fi
+
 export NODE_PATH=/app/node_modules
 export ZIGBEE2MQTT_CONFIG_FRONTEND='{"port": 8099}'
 
@@ -97,9 +97,8 @@ if bashio::config.is_empty 'mqtt' && bashio::var.has_value "$(bashio::services '
     fi
     export ZIGBEE2MQTT_CONFIG_MQTT_USER="$(bashio::services 'mqtt' 'username')"
     export ZIGBEE2MQTT_CONFIG_MQTT_PASSWORD="$(bashio::services 'mqtt' 'password')"
-      
 fi
 
-bashio::log.info "Starting Multi-Point Zigbee Coordinator 🚀"
+bashio::log.info "Starting Zigbee2MQTT..."
 cd /app
 exec node index.js
