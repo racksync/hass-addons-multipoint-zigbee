@@ -1,6 +1,6 @@
 {
     "name": "Zigbee2MQTT Proxy",
-    "version": "0.2.0",
+    "version": "0.2.1",
     "slug": "zigbee2mqtt_proxy",
     "description": "Proxy for externally running Zigbee2MQTT",
     "url": "https://github.com/zigbee2mqtt/hassio-zigbee2mqtt/tree/master/zigbee2mqtt-proxy",
@@ -18,7 +18,11 @@
     "timeout": 30,
     "panel_icon": "mdi:zigbee",
     "map": [
-      "config:ro"
+      {
+        "type": "homeassistant_config",
+        "read_only": true,
+        "path": "/config"
+      }
     ],
     "ports": {
       "8099/tcp": null
@@ -34,5 +38,5 @@
       "server": "url",
       "auth_token": "str?"
     },
-    "image": "zigbee2mqtt/zigbee2mqtt-proxy-{arch}"
+    "image": "ghcr.io/zigbee2mqtt/zigbee2mqtt-proxy-{arch}"
 }

@@ -1,3 +1,11 @@
+## 2.6.0-1
+- Updated Zigbee2MQTT to version [`2.6.0`](https://github.com/Koenkk/zigbee2mqtt/releases/tag/2.6.0)
+- Updated base image to Alpine 3.22
+- Added support for Ember adapters
+- Added Tuya device compatibility improvements
+- Updated map configuration to new format
+- Added Home Assistant API integration
+
 ## 1.39.0-1
 - Updated Zigbee2MQTT to version [`1.39.0`](https://github.com/Koenkk/zigbee2mqtt/releases/tag/1.39.0)
 

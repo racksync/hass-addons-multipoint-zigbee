@@ -20,7 +20,7 @@ RUN apk add --no-cache --virtual .buildtools npm make gcc g++ linux-headers udev
     else \
         echo "Installing Stable version ${BUILD_VERSION%-*}" && \
         curl -sL -o "/app.tar.gz" \
-        "https://github.com/Koenkk/zigbee2mqtt/archive/${BUILD_VERSION%-*}.tar.gz" && \
+        "https://github.com/Koenkk/zigbee2mqtt/archive/refs/tags/${BUILD_VERSION%-*}.tar.gz" && \
         tar xzvf "/app.tar.gz"  && rm "/app.tar.gz" && \
         mv -v "zigbee2mqtt-${BUILD_VERSION%-*}" app && \
         mkdir /app/dist && \

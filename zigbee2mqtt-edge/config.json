@@ -22,8 +22,20 @@
   "timeout": 30,
   "panel_icon": "mdi:zigbee",
   "map": [
-    "share:rw",
-    "config:rw"
+    {
+      "type": "share",
+      "read_only": false
+    },
+    {
+      "type": "homeassistant_config",
+      "read_only": false,
+      "path": "/config"
+    },
+    {
+      "type": "addon_config",
+      "read_only": false,
+      "path": "/addon_config"
+    }
   ],
   "ports": {
     "8485/tcp": 8485,
@@ -71,5 +83,10 @@
     },
     "watchdog": "str?"
   },
-  "image": "zigbee2mqtt/zigbee2mqtt-edge-{arch}"
+  "image": "ghcr.io/zigbee2mqtt/zigbee2mqtt-{arch}",
+  "breaking_versions": [
+    "2.0.0-1"
+  ],
+  "udev": true,
+  "hassio_api": true
 }

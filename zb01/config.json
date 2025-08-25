@@ -1,6 +1,6 @@
 {
   "name": "RS ZB #01",
-  "version": "1.39.0-1",
+  "version": "2.6.0-1",
   "slug": "racksync-multipoint-zigbee-01",
   "description": "Run Zigbee2MQTT Coordinator separately",
   "uart": true,
@@ -22,8 +22,20 @@
   "timeout": 30,
   "panel_icon": "mdi:numeric-1-circle",
   "map": [
-    "share:rw",
-    "config:rw"
+    {
+      "type": "share",
+      "read_only": false
+    },
+    {
+      "type": "homeassistant_config",
+      "read_only": false,
+      "path": "/config"
+    },
+    {
+      "type": "addon_config",
+      "read_only": false,
+      "path": "/addon_config"
+    }
   ],
   "ports": {
     "8485/tcp": 8486,
@@ -70,14 +82,24 @@
       "cert": "str?",
       "user": "str?",
       "password": "str?"
-     },
+    },
     "serial": {
       "port": "str?",
       "adapter": "match(zstack|deconz|zigate|ezsp|ember)?",
       "baudrate": "int?",
-      "rtscts": "bool?"
+      "rtscts": "bool?",
+      "disable_led": "bool?",
+      "advanced": {
+        "transmit_power": "int?"
+      }
     },
-    "watchdog": "str?"
+    "watchdog": "str?",
+    "disable_tuya_default_response": "bool?"
   },
-  "image": "zigbee2mqtt/zigbee2mqtt-{arch}"
+  "image": "ghcr.io/zigbee2mqtt/zigbee2mqtt-{arch}",
+  "breaking_versions": [
+    "2.0.0-1"
+  ],
+  "udev": true,
+  "hassio_api": true
 }
