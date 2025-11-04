@@ -10,17 +10,38 @@ jobs:
       matrix:
         zb: [zb01, zb02, zb03, zb04, zb05, zb06, zb07, zb08, zb09, zb10, zigbee2mqtt-edge, zigbee2mqtt-proxy, common]
     steps:
-      - name: Checkout
+      - name: Checkout source repository
         uses: actions/checkout@v3
-
-      - name: Push ${{ matrix.zb }}
-        uses: dmnemec/copy_file_to_another_repo_action@main
-        env:
-          API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
         with:
-          source_file: "${{ matrix.zb }}/"
-          destination_repo: 'racksync/hass-addons-suite'
-          destination_folder: 'multipoint-zigbee/'
-          user_email: 'devops@racksync.com'
-          user_name: 'racksync'
-          commit_message: '${{ matrix.zb }} has been updated from legacy codebase'
+          repository: racksync/hass-addons-multipoint-zigbee
+          token: ${{ secrets.API_TOKEN_GITHUB }}
+          path: source
+
+      - name: Checkout target repository
+        uses: actions/checkout@v3
+        with:
+          repository: racksync/hass-addons-suite
+          token: ${{ secrets.API_TOKEN_GITHUB }}
+          path: target
+
+      - name: Sync ${{ matrix.zb }} to target repository
+        run: |
+          cd source
+          if [ -d "${{ matrix.zb }}" ]; then
+            echo "Syncing ${{ matrix.zb }} directory..."
+            rsync -av --delete "${{ matrix.zb }}/" "../target/multipoint-zigbee/${{ matrix.zb }}/"
+            cd ../target
+            git config --local user.email "devops@racksync.com"
+            git config --local user.name "racksync"
+            git add multipoint-zigbee/${{ matrix.zb }}/
+            if git diff --staged --quiet; then
+              echo "No changes to commit for ${{ matrix.zb }}"
+            else
+              git commit -m "${{ matrix.zb }} has been updated from legacy codebase"
+              git push origin main
+              echo "Successfully pushed ${{ matrix.zb }} updates"
+            fi
+          else
+            echo "Directory ${{ matrix.zb }} does not exist in source repository"
+            exit 1
+          fi
