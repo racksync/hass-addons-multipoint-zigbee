@@ -1,4 +1,4 @@
-name: Push to Main Add-Ons Suite
+name: Push Zigbee2MQTT to Main Add-Ons Suite
 on:
   push:
     branches: master

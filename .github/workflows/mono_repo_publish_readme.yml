@@ -1,4 +1,4 @@
-name: Push to Add-Ons Suite
+name: Push README to Add-Ons Suite
 on:
   push:
     branches: master
