@@ -1,9 +1,9 @@
-# Home Assistant - Run multipoint Zigbee2MQTT Coordinator separately from an Official 
+# Home Assistant - Run multipoint Zigbee2MQTT Coordinator separately from an Official
 
-[![Base Image](https://img.shields.io/badge/Base%20Image-3.18-blue)](https://github.com/home-assistant/docker-base)  [![alpine-armhf](https://img.shields.io/badge/armhf-yes-brightgreen)](https://alpinelinux.org/releases/) 
-[![alpine-armv7](https://img.shields.io/badge/armv7-yes-brightgreen)](https://alpinelinux.org/releases/) 
-[![alpine-aarch64](https://img.shields.io/badge/aarch64-yes-brightgreen)](https://alpinelinux.org/releases/) 
-[![alpine-amd64](https://img.shields.io/badge/amd64-yes-brightgreen)](https://alpinelinux.org/releases/) 
+[![Base Image](https://img.shields.io/badge/Base%20Image-3.18-blue)](https://github.com/home-assistant/docker-base)  [![alpine-armhf](https://img.shields.io/badge/armhf-yes-brightgreen)](https://alpinelinux.org/releases/)
+[![alpine-armv7](https://img.shields.io/badge/armv7-yes-brightgreen)](https://alpinelinux.org/releases/)
+[![alpine-aarch64](https://img.shields.io/badge/aarch64-yes-brightgreen)](https://alpinelinux.org/releases/)
+[![alpine-amd64](https://img.shields.io/badge/amd64-yes-brightgreen)](https://alpinelinux.org/releases/)
 [![alpine-i386](https://img.shields.io/badge/i386-yes-brightgreen)](https://alpinelinux.org/releases/)
 [![cloudflare-argo-tunnel-release](https://img.shields.io/github/v/release/racksync/hass-addons-multipoint-zigbee)](https://github.com/racksync/hass-addons-multipoint-zigbee/releases) [![last commit](https://img.shields.io/github/last-commit/racksync/hass-addons-multipoint-zigbee)](https://github.com/racksync/hass-addons-multipoint-zigbee/commit/)
 
@@ -15,7 +15,7 @@ This setup is ideal for those who wish to run zigbee2mqtt and require the abilit
 
 Install the addon by adding the repository: https://github.com/racksync/hass-addons-suite to the addon list as usual.
 
-## Configuration 
+## Configuration
 
 Set the addon configuration as follows:
 
@@ -40,7 +40,7 @@ advanced:
 
 - [Home Automation Thailand](https://www.facebook.com/groups/hathailand)
 - [Home Automation Marketplace](https://www.facebook.com/groups/hatmarketplace)
-- [Home Automation Thailand Discord](https://discord.gg/Wc5CwnWkp4) 
+- [Home Automation Thailand Discord](https://discord.gg/Wc5CwnWkp4)
 
 ### [RACKSYNC CO., LTD.](https://racksync.com)
 
@@ -50,7 +50,7 @@ RACKSYNC CO., LTD. is an expert in Automation and Smart Solutions of all sizes. 
 RACKSYNC COMPANY LIMITED \
 Suratthani, Thailand 84100 \
 Email : devops@racksync.com \
-Tel : +66 85 880 8885 
+Tel : +66 85 880 8885
 
-[![Home Automation Thailand Discord](https://img.shields.io/discord/986181205504438345?style=for-the-badge)](https://discord.gg/Wc5CwnWkp4) [![Github](https://img.shields.io/github/followers/racksync?style=for-the-badge)](https://github.com/racksync) 
+[![Home Automation Thailand Discord](https://img.shields.io/discord/986181205504438345?style=for-the-badge)](https://discord.gg/Wc5CwnWkp4) [![Github](https://img.shields.io/github/followers/racksync?style=for-the-badge)](https://github.com/racksync)
 [![WebsiteStatus](https://img.shields.io/website?down_color=grey&down_message=Offline&style=for-the-badge&up_color=green&up_message=Online&url=https%3A%2F%2Fracksync.com)](https://racksync.com)
