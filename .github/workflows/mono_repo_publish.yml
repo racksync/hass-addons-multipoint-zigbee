@@ -13,12 +13,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Fetch all branches
-        run: git fetch --all
-
-      - name: Reset to remote main
-        run: git reset --hard origin/main
-
       - name: Push ${{ matrix.zb }}
         uses: dmnemec/copy_file_to_another_repo_action@main
         env:
@@ -30,13 +24,3 @@ jobs:
           user_email: 'devops@racksync.com'
           user_name: 'racksync'
           commit_message: '${{ matrix.zb }} has been updated from legacy codebase'
-
-      - name: Pull and rebase latest changes
-        run: |
-          git pull --rebase origin main || { echo "Rebase failed, aborting..."; git rebase --abort; exit 1; }
-
-      - name: Push changes with retry
-        run: |
-          for i in {1..5}; do
-            git pull --rebase origin main && git push -u origin HEAD:main && break || { echo "Push failed, retrying in 15 seconds..."; sleep 15; }
-          done
