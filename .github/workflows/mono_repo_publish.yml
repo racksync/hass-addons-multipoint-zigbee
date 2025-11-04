@@ -9,6 +9,7 @@ jobs:
     strategy:
       matrix:
         zb: [zb01, zb02, zb03, zb04, zb05, zb06, zb07, zb08, zb09, zb10, zigbee2mqtt-edge, zigbee2mqtt-proxy, common]
+      max-parallel: 1
     steps:
       - name: Checkout source repository
         uses: actions/checkout@v3
@@ -38,6 +39,8 @@ jobs:
               echo "No changes to commit for ${{ matrix.zb }}"
             else
               git commit -m "${{ matrix.zb }} has been updated from legacy codebase"
+              # Pull latest changes before pushing to avoid conflicts
+              git pull origin main --rebase
               git push origin main
               echo "Successfully pushed ${{ matrix.zb }} updates"
             fi
