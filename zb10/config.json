@@ -1,6 +1,6 @@
 {
   "name": "RS ZB #10",
-  "version": "2.6.0-1",
+  "version": "2.11.0-1",
   "slug": "racksync-multipoint-zigbee-10",
   "description": "Run Zigbee2MQTT Coordinator separately",
   "uart": true,
@@ -81,11 +81,12 @@
       "key": "str?",
       "cert": "str?",
       "user": "str?",
-      "password": "str?"
+      "password": "str?",
+      "base_topic": "str?"
     },
     "serial": {
       "port": "str?",
-      "adapter": "match(zstack|deconz|zigate|ezsp|ember)?",
+      "adapter": "match(zstack|deconz|zigate|ezsp|ember|zboss)?",
       "baudrate": "int?",
       "rtscts": "bool?",
       "disable_led": "bool?",
