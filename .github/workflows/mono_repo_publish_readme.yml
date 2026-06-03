@@ -2,13 +2,14 @@ name: Push README to Add-Ons Suite
 on:
   push:
     branches: master
+  workflow_dispatch:
 
 jobs:
     push-multipoint-zigbee-readme:
         runs-on: ubuntu-latest
         steps:
           - name: Checkout
-            uses: actions/checkout@v3
+            uses: actions/checkout@v4
           - name: Push README
             uses: dmnemec/copy_file_to_another_repo_action@main
             env:

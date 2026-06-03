@@ -2,6 +2,7 @@ name: Push Zigbee2MQTT to Main Add-Ons Suite
 on:
   push:
     branches: master
+  workflow_dispatch:
 
 jobs:
   push-job:
@@ -12,14 +13,16 @@ jobs:
       max-parallel: 1
     steps:
       - name: Checkout source repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
-          repository: racksync/hass-addons-multipoint-zigbee
-          token: ${{ secrets.API_TOKEN_GITHUB }}
+          # Source is the current repo; the automatic GITHUB_TOKEN can always
+          # read it. Do NOT use API_TOKEN_GITHUB here — that PAT is scoped to
+          # the target repo only and fails to authenticate the source fetch
+          # ("could not read Username"), which silently skipped the sync.
           path: source
 
       - name: Checkout target repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           repository: racksync/hass-addons-suite
           token: ${{ secrets.API_TOKEN_GITHUB }}
