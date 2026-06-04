@@ -13,7 +13,9 @@ jobs:
           - name: Push README
             uses: dmnemec/copy_file_to_another_repo_action@main
             env:
-                API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+                # SSH deploy key (read/write on hass-addons-suite) instead of a
+                # PAT — deploy keys don't expire. See mono_repo_publish.yml.
+                SSH_DEPLOY_KEY: ${{ secrets.SSH_DEPLOY_KEY }}
             with:
                 source_file: "README.md"
                 destination_repo: 'racksync/hass-addons-suite'

@@ -21,12 +21,19 @@ jobs:
           # ("could not read Username"), which silently skipped the sync.
           path: source
 
+      - name: Set up SSH deploy key for target
+        run: |
+          # SSH_DEPLOY_KEY is a read/write deploy key registered on
+          # racksync/hass-addons-suite. Deploy keys don't expire, so this
+          # replaces the API_TOKEN_GITHUB PAT that kept lapsing.
+          mkdir -p ~/.ssh
+          printf '%s\n' "${{ secrets.SSH_DEPLOY_KEY }}" > ~/.ssh/suite_deploy_key
+          chmod 600 ~/.ssh/suite_deploy_key
+          ssh-keyscan -t ed25519,rsa github.com >> ~/.ssh/known_hosts 2>/dev/null
+          printf 'Host github.com\n  IdentityFile ~/.ssh/suite_deploy_key\n  IdentitiesOnly yes\n' >> ~/.ssh/config
+
       - name: Checkout target repository
-        uses: actions/checkout@v4
-        with:
-          repository: racksync/hass-addons-suite
-          token: ${{ secrets.API_TOKEN_GITHUB }}
-          path: target
+        run: git clone git@github.com:racksync/hass-addons-suite.git target
 
       - name: Sync ${{ matrix.zb }} to target repository
         run: |
